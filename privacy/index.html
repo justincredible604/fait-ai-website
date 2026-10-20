@@ -1,162 +1,538 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FAiT Privacy Policy</title>
-  <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; max-width: 760px; margin: 0 auto; padding: 24px 16px; color: #222; background: #fff; }
-    h1 { font-size: 1.8em; }
-    h2 { margin-top: 2em; font-size: 1.25em; }
-    table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-    th, td { border: 1px solid #ccc; padding: 8px; text-align: left; vertical-align: top; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — FAiT</title>
+<meta name="description" content="FAiT privacy policy. What we collect, how the AI coach uses your data, your rights, and how to delete your account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #0a0a0a;
+    --surface: #141414;
+    --surface-2: #1c1c1c;
+    --border: #2a2a2a;
+    --text: #f5f5f5;
+    --text-muted: #a3a3a3;
+    --text-dim: #737373;
+    --accent: #c3ff2b;
+    --accent-dim: #9fd420;
+    --max: 760px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Header */
+  header {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .logo .accent { color: var(--accent); font-style: italic; }
+  .nav-cta {
+    background: var(--accent);
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: opacity 0.2s;
+  }
+  .nav-cta:hover { opacity: 0.85; }
+
+  /* Main */
+  main {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 48px;
+  }
+  h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 56px 0 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  h2:first-of-type { border-top: none; padding-top: 0; }
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 32px 0 12px;
+  }
+  p { margin: 0 0 16px; color: var(--text); }
+  a { color: var(--accent); text-decoration: none; border-bottom: 1px solid rgba(195, 255, 43, 0.3); }
+  a:hover { border-bottom-color: var(--accent); }
+  strong { color: var(--text); font-weight: 600; }
+  ul, ol { padding-left: 24px; margin: 0 0 20px; }
+  li { margin-bottom: 8px; color: var(--text-muted); }
+  li strong { color: var(--text); }
+
+  /* Summary callout */
+  .summary {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 24px 28px;
+    border-radius: 8px;
+    margin: 32px 0 40px;
+  }
+  .summary h3 {
+    margin-top: 0;
+    color: var(--accent);
+    font-family: 'Space Grotesk', sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+  }
+  .summary ul { margin-bottom: 0; }
+  .summary li { color: var(--text); }
+
+  /* Tables */
+  .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 8px; border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--surface-2); color: var(--text); font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; }
+  tr:last-child td { border-bottom: none; }
+  td { color: var(--text-muted); }
+  td strong, td a { color: var(--text); }
+  td a { color: var(--accent); }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 48px 0;
+  }
+
+  .disclaimer {
+    color: var(--text-dim);
+    font-size: 13px;
+    font-style: italic;
+    margin-top: 24px;
+  }
+
+  /* Footer */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-muted); border: none; margin: 0 12px; }
+  footer a:hover { color: var(--accent); }
+  footer .made { margin-top: 12px; font-size: 12px; }
+
+  /* Mobile */
+  @media (max-width: 600px) {
+    h1 { font-size: 32px; }
+    h2 { font-size: 20px; margin-top: 40px; }
+    main { padding: 40px 20px 60px; }
+    header { padding: 16px 20px; }
+    .logo { font-size: 20px; }
+    .nav-cta { padding: 8px 16px; font-size: 13px; }
+    th, td { padding: 10px 12px; font-size: 13px; }
+  }
+</style>
 </head>
 <body>
-  <h1>FAiT Privacy Policy</h1>
-  <p><em>Last Updated: September 10, 2026</em></p>
-  <p>Website: <a href="https://fait-ai.app">https://fait-ai.app</a></p>
 
-  <h2>1. Introduction</h2>
-  <p>FAiT ("App" or "Service") is a personal AI fitness coach that helps you track workouts, nutrition, and health metrics. We are committed to protecting your privacy and being transparent about how we collect and use your data.</p>
-  <p>This Privacy Policy complies with:</p>
+<header>
+  <a href="/" class="logo">F<span class="accent">A</span>iT</a>
+  <a href="/#get" class="nav-cta">Join the beta</a>
+</header>
+
+<main>
+
+<h1>Privacy Policy</h1>
+<p class="meta">Effective: October 19, 2026 · Last updated: October 19, 2026</p>
+
+<p>FAiT is an AI-powered fitness coaching app operated by Justin Lee (sole proprietor, based in British Columbia, Canada). This policy explains what personal information we collect, why we collect it, who we share it with, and the rights you have over it.</p>
+
+<div class="summary">
+  <h3>Plain-English Summary</h3>
   <ul>
-    <li>CCPA (California Consumer Privacy Act, as amended by CPRA)</li>
-    <li>GDPR (General Data Protection Regulation)</li>
-    <li>CalOPPA (California Online Privacy Protection Act)</li>
+    <li>We collect what you give us (account info, workouts, meals, weight, mood, sleep, photos, voice notes) and basic device/analytics data so the app works and the AI coach can help you.</li>
+    <li>We send your coaching conversations and some of your fitness data to Anthropic (Claude) to generate the coach's replies. Anthropic does not train on our API data.</li>
+    <li>We don't sell your data. We don't share it with advertisers.</li>
+    <li>You can delete your account and all your data from inside the app, at any time.</li>
+    <li>Health data (what you weigh, what you eat, your workouts, your menstrual cycle) is treated as sensitive and we ask for your explicit consent to process it.</li>
   </ul>
+</div>
 
-  <h2>2. Personal Information We Collect</h2>
-  <p><strong>Account Registration Data:</strong></p>
-  <ul>
-    <li>Email address</li>
-    <li>First name and last name</li>
-    <li>City, State/Province, ZIP/Postal code</li>
-    <li>Password (encrypted)</li>
-  </ul>
-  <p><strong>Health &amp; Fitness Data:</strong></p>
-  <ul>
-    <li>Exercises logged (name, weight, reps, sets)</li>
-    <li>Meals logged (name, calories, macros)</li>
-    <li>Weight and body measurements</li>
-    <li>Steps, sleep hours, water intake</li>
-    <li>Fasting sessions</li>
-    <li>Workout photos</li>
-    <li>Voice recordings (transcribed to text, original audio not stored)</li>
-  </ul>
-  <p><strong>Social Media Profile Information:</strong></p>
-  <p>When you connect via Facebook or Google:</p>
-  <ul>
-    <li>Profile name</li>
-    <li>Profile picture</li>
-    <li>Email address</li>
-    <li>Basic profile information</li>
-  </ul>
-  <p><strong>Device &amp; Usage Data:</strong></p>
-  <ul>
-    <li>Device type, OS version, app version</li>
-    <li>Pages/screens visited, features used</li>
-    <li>Interaction timing and frequency</li>
-    <li>Crash logs and error reports</li>
-  </ul>
-  <p><strong>Analytics Data (PostHog):</strong></p>
-  <p>We use PostHog to track user behavior, feature usage, and app performance.</p>
+<p>If you want the detail, keep reading. If anything here is unclear, email us at <a href="mailto:info@fait-ai.app">info@fait-ai.app</a>.</p>
 
-  <h2>3. How We Use Your Data</h2>
-  <ul>
-    <li>To provide personalized AI coaching</li>
-    <li>To generate fitness recommendations</li>
-    <li>To track your progress</li>
-    <li>To process in-app payments</li>
-    <li>To send transactional emails</li>
-    <li>To send promotional emails (with your consent)</li>
-    <li>To improve the app</li>
-    <li>To comply with legal obligations</li>
-  </ul>
+<h2>1. Who we are</h2>
+<p>FAiT (Fitness A.I. Trainer) is operated by Justin Lee, a sole proprietor based in British Columbia, Canada. We are the "data controller" for the personal information this app collects.</p>
+<ul>
+  <li><strong>Business:</strong> FAiT, operated by Justin Lee (sole proprietor)</li>
+  <li><strong>Jurisdiction:</strong> British Columbia, Canada</li>
+  <li><strong>Contact (privacy, data requests, questions):</strong> <a href="mailto:info@fait-ai.app">info@fait-ai.app</a></li>
+  <li><strong>Response time:</strong> we aim to respond within 30 days (within 45 days for California requests, as CCPA requires)</li>
+</ul>
+<p>We don't currently have a designated Data Protection Officer, which is permitted under GDPR for a business of our size. For GDPR-related questions, email <a href="mailto:info@fait-ai.app">info@fait-ai.app</a> and your request will be handled directly by Justin.</p>
 
-  <h2>4. Email Communications</h2>
-  <p><strong>Transactional Emails:</strong> Account confirmations, password resets, purchase receipts.</p>
-  <p><strong>Promotional Emails:</strong> You can opt-in during signup and opt-out anytime via the "Unsubscribe" link or Settings → Email Preferences.</p>
+<h2>2. Information we collect</h2>
 
-  <h2>5. In-App Payments &amp; Advertising</h2>
-  <p><strong>Payment Methods:</strong></p>
-  <ul>
-    <li>Apple App Store In-App Payments</li>
-    <li>Google Play In-App Payments</li>
-  </ul>
-  <p><strong>Advertising:</strong> We may display ads in the future using non-personal data.</p>
+<h3>Account information (collected when you sign up)</h3>
+<ul>
+  <li>Email address</li>
+  <li>First and last name</li>
+  <li>City, state/province, ZIP/postal code</li>
+  <li>Password (stored encrypted — we never see your actual password)</li>
+  <li>Date of birth and sex at birth (used to tailor coaching and, for women, cycle-aware recommendations)</li>
+</ul>
 
-  <h2>6. Third-Party Services</h2>
-  <table>
-    <tr><th>Service</th><th>Purpose</th><th>Privacy Link</th></tr>
-    <tr><td>Claude AI (Anthropic)</td><td>Processes fitness data for coaching</td><td><a href="https://www.anthropic.com/legal/privacy">Privacy policy</a></td></tr>
-    <tr><td>Supabase</td><td>Stores account and health data</td><td><a href="https://supabase.com/privacy">Privacy policy</a></td></tr>
-    <tr><td>RevenueCat</td><td>Processes payments</td><td><a href="https://www.revenuecat.com/privacy">Privacy policy</a></td></tr>
-    <tr><td>PostHog</td><td>Analytics and tracking</td><td><a href="https://posthog.com/privacy">Privacy policy</a></td></tr>
-    <tr><td>Deepgram</td><td>Voice transcription</td><td><a href="https://deepgram.com/privacy">Privacy policy</a></td></tr>
-  </table>
+<h3>If you sign in with Facebook or Google</h3>
+<ul>
+  <li>Your profile name, profile picture, email, and basic profile information from that provider</li>
+  <li>We do not post anything to your social accounts</li>
+</ul>
 
-  <h2>7. Data Storage &amp; Security</h2>
-  <ul>
-    <li>Data stored on Supabase (US-based) with encryption at rest</li>
-    <li>All communication encrypted via HTTPS</li>
-    <li>Only you can access your account with your encrypted password</li>
-    <li>Industry-standard security practices</li>
-  </ul>
+<h3>Health and fitness data (the core of what FAiT does)</h3>
+<ul>
+  <li>Workouts: exercise names, weight, reps, sets, duration, calories burned</li>
+  <li>Nutrition: meal entries, calories, protein, carbs, fat, water intake, meal photos</li>
+  <li>Body: weight history, body measurements, progress photos (the bicep-flex pose)</li>
+  <li>Activity: steps, sleep hours, mood check-ins, daily pulse (energy, stress, soreness)</li>
+  <li>Fasting: fasting sessions, protocols, start/end times</li>
+  <li>Menstrual cycle (for women, optional): cycle day, phase, symptoms, pain level</li>
+  <li>Goals: your target weight, timeline, pace, and activity level</li>
+</ul>
 
-  <h2>8. Data Retention</h2>
-  <ul>
-    <li>Account data: Retained while account is active</li>
-    <li>Health data: Retained for analysis and coaching</li>
-    <li>Analytics data: Retained for up to 12 months</li>
-    <li>Upon deletion: All data removed within 30 days</li>
-  </ul>
+<h3>AI coaching data</h3>
+<ul>
+  <li>Your chat messages with the AI coach and the coach's replies</li>
+  <li>Thumbs-up/thumbs-down ratings and any note you add when you flag a reply as wrong</li>
+  <li>A "Twin profile" the app builds from your patterns (behavioral insights with confidence scores)</li>
+  <li>A rolling "coach memory" summary that helps the coach remember prior context across sessions</li>
+  <li>Voice recordings when you use voice input (transcribed to text; the original audio is not stored)</li>
+</ul>
 
-  <h2>9. Your Privacy Rights</h2>
-  <p><strong>CCPA + CPRA (California Users)</strong></p>
-  <p>You have the right to:</p>
-  <ul>
-    <li>Know: What personal information we collect</li>
-    <li>Delete: Your personal information</li>
-    <li>Opt-out: Of sale or sharing of your data</li>
-    <li>Correct: Inaccurate information</li>
-    <li>Data portability: Receive your data in portable format</li>
-    <li>Non-discrimination: We won't discriminate for exercising these rights</li>
-  </ul>
-  <p>To exercise rights: info@fait-ai.app</p>
+<h3>Device and usage data (collected automatically)</h3>
+<ul>
+  <li>Device type, OS version, app version</li>
+  <li>Screens visited, features used, interaction timing and frequency</li>
+  <li>Crash logs and error reports</li>
+  <li>IP address (used only for security and abuse prevention — we don't log it with your activity)</li>
+</ul>
 
-  <p><strong>GDPR (EU Users)</strong></p>
-  <p>You have the right to:</p>
-  <ul>
-    <li>Access: Your personal data</li>
-    <li>Rectification: Fix inaccurate data</li>
-    <li>Erasure: Delete your data ("right to be forgotten")</li>
-    <li>Data portability: Export your data</li>
-    <li>Restrict processing: Limit how we use your data</li>
-    <li>Object: To processing</li>
-    <li>Lodge a complaint: With your data protection authority</li>
-  </ul>
-  <p>To exercise rights: info@fait-ai.app</p>
+<h3>Analytics (via PostHog)</h3>
+<ul>
+  <li>Anonymized or pseudonymous event data about how you use the app</li>
+  <li>Session information (not session replays with your inputs)</li>
+</ul>
 
-  <p><strong>CalOPPA (California Users)</strong></p>
-  <ul>
-    <li>Privacy Policy accessible in the app</li>
-    <li>We respond to privacy requests within 45 days</li>
-    <li>We do not track users across third-party websites</li>
-    <li>Security breaches reported without unreasonable delay</li>
-  </ul>
+<h3>What we do NOT collect</h3>
+<ul>
+  <li>Your contacts, calendar, SMS, or call history</li>
+  <li>Your location (beyond city/postal code you enter at signup)</li>
+  <li>Browsing history outside the app</li>
+  <li>Biometric identifiers (we don't use face recognition, fingerprints, or voice prints)</li>
+</ul>
 
-  <h2>10. Children's Privacy</h2>
-  <p>FAiT is not intended for children under 16. We do not knowingly collect information from anyone under 16. If we discover we have collected such data, we will delete it immediately.</p>
-  <p>Parents or guardians concerned their child has provided information should contact info@fait-ai.app.</p>
+<h2>3. Why we collect your data and our lawful basis</h2>
+<p>Under GDPR we have to tell you not just what we do with your data, but what gives us the legal right to do it. Here's each purpose and the lawful basis for it:</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Purpose</th><th>Lawful basis (GDPR)</th></tr></thead>
+  <tbody>
+    <tr><td>Create and operate your account</td><td>Contract (necessary to provide the service you signed up for)</td></tr>
+    <tr><td>Deliver personalized AI coaching based on your fitness data</td><td>Contract + explicit consent for health data (Article 9)</td></tr>
+    <tr><td>Track your workouts, meals, weight, mood, and progress</td><td>Contract</td></tr>
+    <tr><td>Process in-app subscription payments</td><td>Contract</td></tr>
+    <tr><td>Send transactional emails (receipts, password resets, account alerts)</td><td>Contract</td></tr>
+    <tr><td>Send promotional emails about new features</td><td>Consent (opt-in; you can withdraw anytime)</td></tr>
+    <tr><td>Improve app features and fix bugs</td><td>Legitimate interest (improving a service you use)</td></tr>
+    <tr><td>Analyze aggregate usage patterns</td><td>Legitimate interest</td></tr>
+    <tr><td>Comply with legal obligations (tax records, lawful requests)</td><td>Legal obligation</td></tr>
+    <tr><td>Prevent abuse, fraud, and attacks on the service</td><td>Legitimate interest</td></tr>
+  </tbody>
+</table>
+</div>
+<p>For users outside the EU, these purposes still apply — we're just not required to state the GDPR category.</p>
+<p><strong>Withdrawing consent:</strong> where we rely on your consent (promotional emails, health data processing, menstrual cycle tracking), you can withdraw it at any time by changing your settings in the app or emailing <a href="mailto:info@fait-ai.app">info@fait-ai.app</a>. Withdrawing consent doesn't affect anything we did while you had given it.</p>
 
-  <h2>11. Changes to This Policy</h2>
-  <p>We may update this policy. We will post updates in the app and notify users of material changes.</p>
+<h2>4. How the AI coach uses your data</h2>
+<p>The AI coach is the core of FAiT, so we want to be especially clear about what happens when you message it.</p>
 
-  <h2>12. Contact Us</h2>
-  <p>Email: info@fait-ai.app</p>
-  <p>Website: <a href="https://fait-ai.app">https://fait-ai.app</a></p>
-  <p>Response Time: We respond to privacy requests within 45 days.</p>
-  <p>Data Protection Officer (GDPR): Contact your local data protection authority or email info@fait-ai.app.</p>
+<h3>What we send to Anthropic (Claude) with each message</h3>
+<ul>
+  <li>Your most recent chat message</li>
+  <li>The last 10 messages of your conversation with the coach</li>
+  <li>Your current fitness context: name, goal, target weight, timeline, pace, activity level, today's calories/protein consumed, calorie and protein goals, current mood and sleep hours, active fasting session if any</li>
+  <li>Your Twin profile (the behavioral patterns we've learned about you)</li>
+  <li>Your rolling coach memory summary (a condensed version of prior conversations)</li>
+  <li>For female users (if you have the feature enabled): your current menstrual cycle day, phase, symptoms, and pain level</li>
+</ul>
+
+<h3>What we do NOT send to Anthropic</h3>
+<ul>
+  <li>Your email address, name as it appears on your account, address, or any direct contact info</li>
+  <li>Your password or payment information</li>
+  <li>Your progress photos (except when you use the dedicated photo analysis feature, which sends only the photo for the single analysis)</li>
+  <li>Any messages flagged as containing sensitive crisis content — these are intercepted and get a safety response, not an AI reply</li>
+</ul>
+
+<h3>Anthropic's role as a data processor</h3>
+<ul>
+  <li>Anthropic processes your data only to generate the AI coach's reply</li>
+  <li>Per Anthropic's commercial API terms, <strong>Anthropic does not use our API data to train their models.</strong> See <a href="https://www.anthropic.com/legal/commercial-terms">Anthropic's data policy</a> for details.</li>
+  <li>Data sent via the API is retained by Anthropic for up to 30 days for abuse monitoring, then deleted</li>
+  <li>Anthropic is a US-based company; see Section 7 on international transfers</li>
+</ul>
+
+<p><strong>Automated decision-making:</strong> the AI coach gives you suggestions — workout ideas, nutrition targets, coaching notes — but it never makes decisions that have legal effects or significantly affect you. You confirm anything that gets saved (meal logs, workouts, weight entries) before it goes into your history.</p>
+
+<p><strong>Rate limits:</strong> to protect against abuse and runaway costs, we limit how many messages you can send per day (currently 50/day on the free tier, 100/day on paid). The counter resets each day.</p>
+
+<h2>5. Health and fitness data (sensitive category)</h2>
+<p>The health and fitness data you give FAiT — your weight, workouts, meals, sleep, mood, body measurements, menstrual cycle, progress photos — is "special category data" under GDPR Article 9 and "sensitive personal information" under California's CPRA. We treat it with extra care.</p>
+
+<p><strong>Your explicit consent:</strong> when you sign up, you'll see a consent prompt specifically for health and fitness data. You can't use FAiT without agreeing to this, because the app's core function depends on it. You can withdraw consent at any time by deleting your account.</p>
+
+<h3>How we use health data</h3>
+<ul>
+  <li>To personalize your coaching, meal and workout suggestions</li>
+  <li>To build your Twin profile and progress predictions</li>
+  <li>To display your history and progress charts to you</li>
+  <li>To send the data to Anthropic (Claude) as described in Section 4</li>
+</ul>
+
+<h3>How we DO NOT use health data</h3>
+<ul>
+  <li>We do NOT use your health data for advertising</li>
+  <li>We do NOT sell your health data to anyone</li>
+  <li>We do NOT share your health data with insurers, employers, or any third party for their own purposes</li>
+  <li>We do NOT use your health data for research without a separate, specific consent from you</li>
+</ul>
+
+<p><strong>HealthKit (Apple) and Health Connect (Android):</strong> if you grant FAiT permission to read from Apple HealthKit or Android Health Connect, we will only read the data categories you approve (currently: steps, sleep, weight). This data is sent to our server to show in your history and shape coaching. It is not used for advertising, not sold, and not shared beyond the processors listed in Section 6. If you later revoke these permissions in your phone's settings, we stop reading new data; existing data stays in your account until you delete it.</p>
+
+<p><strong>Menstrual cycle tracking</strong> (if you choose to use it): this is optional. You can turn it off at any time in Settings. When off, we stop asking for new cycle data; existing data stays in your account until you delete it or your account.</p>
+
+<h2>6. Who we share your data with</h2>
+<p>We share your data only with service providers we need to run FAiT. Each is bound by a data processing agreement and may only use your data to provide their service to us — not for their own purposes.</p>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Service</th><th>What they do</th><th>What they receive</th><th>Privacy policy</th></tr></thead>
+  <tbody>
+    <tr><td><strong>Supabase</strong></td><td>Database, authentication, file storage, Edge Functions</td><td>All data stored by the app (encrypted at rest)</td><td><a href="https://supabase.com/privacy">supabase.com/privacy</a></td></tr>
+    <tr><td><strong>Anthropic (Claude)</strong></td><td>AI model that generates coach replies</td><td>Chat messages and the fitness context described in Section 4</td><td><a href="https://www.anthropic.com/legal/privacy">anthropic.com/legal/privacy</a></td></tr>
+    <tr><td><strong>Deepgram</strong></td><td>Voice-to-text transcription when you use voice input</td><td>Your voice audio (deleted after transcription)</td><td><a href="https://deepgram.com/privacy">deepgram.com/privacy</a></td></tr>
+    <tr><td><strong>RevenueCat</strong></td><td>In-app subscription management</td><td>Subscription status and purchase events (no payment card details)</td><td><a href="https://www.revenuecat.com/privacy">revenuecat.com/privacy</a></td></tr>
+    <tr><td><strong>PostHog</strong></td><td>Product analytics</td><td>Anonymized/pseudonymous event data, device info</td><td><a href="https://posthog.com/privacy">posthog.com/privacy</a></td></tr>
+    <tr><td><strong>Resend</strong></td><td>Transactional and promotional email delivery</td><td>Your email address and the email content</td><td><a href="https://resend.com/legal/privacy-policy">resend.com/legal/privacy-policy</a></td></tr>
+    <tr><td><strong>Google</strong></td><td>Sign-In provider (if you choose Google sign-in)</td><td>Your Google account email and basic profile</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+    <tr><td><strong>Meta/Facebook</strong></td><td>Sign-In provider (if you choose Facebook sign-in)</td><td>Your Facebook email and basic profile</td><td><a href="https://www.facebook.com/privacy/policy">facebook.com/privacy/policy</a></td></tr>
+    <tr><td><strong>Apple</strong></td><td>App Store distribution, in-app purchases, HealthKit (if enabled), Sign in with Apple (if used)</td><td>Purchase and subscription events; health data categories you approve</td><td><a href="https://www.apple.com/legal/privacy/">apple.com/legal/privacy</a></td></tr>
+    <tr><td><strong>Google (Play)</strong></td><td>App distribution, in-app purchases, Health Connect (if enabled)</td><td>Purchase and subscription events; health data categories you approve</td><td><a href="https://policies.google.com/privacy">policies.google.com/privacy</a></td></tr>
+    <tr><td><strong>Cloudflare</strong></td><td>DNS, email routing, website hosting</td><td>IP address and standard request metadata</td><td><a href="https://www.cloudflare.com/privacypolicy/">cloudflare.com/privacypolicy</a></td></tr>
+  </tbody>
+</table>
+</div>
+<p><strong>We do NOT sell your data.</strong> We do NOT share your personal information with advertisers, data brokers, or marketing companies.</p>
+<p><strong>Legal disclosures:</strong> we may disclose your data if required by law, court order, or valid legal process, or if we believe disclosure is necessary to protect our rights or the safety of users. We will tell you about such requests unless legally prohibited.</p>
+
+<h2>7. International data transfers</h2>
+<p>FAiT is operated from Canada. Several of our processors (Supabase, Anthropic, PostHog, Resend) are based in the United States, and others (Google, Meta, Apple, Cloudflare) operate globally.</p>
+<p><strong>For users in the European Economic Area (EEA), United Kingdom, and Switzerland:</strong> when we transfer your personal data outside the EEA, we rely on one of the following safeguards:</p>
+<ul>
+  <li><strong>Standard Contractual Clauses (SCCs)</strong> approved by the European Commission — these are in place with Supabase, Anthropic, PostHog, and Resend</li>
+  <li><strong>Adequacy decisions</strong> where available (Canada has a partial adequacy decision from the European Commission for commercial organizations)</li>
+  <li><strong>UK International Data Transfer Addendum</strong> for transfers subject to UK GDPR</li>
+</ul>
+<p><strong>For Canadian users:</strong> Canada's PIPEDA (Personal Information Protection and Electronic Documents Act) permits cross-border transfers provided we remain accountable for your data. Our processors have been chosen with that in mind.</p>
+<p><strong>For California users:</strong> your data may be transferred to and processed in other US states and countries. These transfers are covered by our processor contracts and your rights under CCPA/CPRA continue to apply.</p>
+<p>If you want a copy of the specific transfer safeguards for any of our processors, email <a href="mailto:info@fait-ai.app">info@fait-ai.app</a>.</p>
+
+<h2>8. Data storage, security, and retention</h2>
+<p><strong>Where your data is stored:</strong> your data lives in a Supabase-hosted PostgreSQL database and object storage in the United States. Data is encrypted at rest and encrypted in transit (TLS 1.2+ / HTTPS).</p>
+
+<h3>How we protect it</h3>
+<ul>
+  <li>Passwords are hashed; we never store or see your plaintext password</li>
+  <li>Row-Level Security (RLS) on all tables that contain user data — by default, you can only access your own rows</li>
+  <li>All server-side functions enforce authentication and authorization before reading or writing your data</li>
+  <li>Account suspension and global kill switches available to respond quickly to abuse or incidents</li>
+  <li>Automatic daily rate limits on AI usage to prevent abuse</li>
+  <li>All third-party service accounts protected by strong passwords and (where available) multi-factor authentication</li>
+</ul>
+
+<p><strong>No system is 100% secure.</strong> If we become aware of a breach that affects your personal information, we will notify you and the relevant regulators as required by law (within 72 hours for GDPR-covered users).</p>
+
+<h3>How long we keep your data</h3>
+<div class="table-wrap">
+<table>
+  <thead><tr><th>Data</th><th>Retention</th></tr></thead>
+  <tbody>
+    <tr><td>Account and health data</td><td>Kept while your account is active</td></tr>
+    <tr><td>On account deletion</td><td>All personal data deleted within 30 days; backups purged within 90 days</td></tr>
+    <tr><td>Analytics data (PostHog)</td><td>Up to 12 months, then deleted</td></tr>
+    <tr><td>AI coaching logs (Anthropic side)</td><td>Up to 30 days by Anthropic, then deleted</td></tr>
+    <tr><td>Transactional email logs</td><td>Up to 90 days</td></tr>
+    <tr><td>Legal/tax records</td><td>Kept as long as required by Canadian tax law (typically 6 years)</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2>9. Your rights</h2>
+<p>Your rights depend on where you live. Email <a href="mailto:info@fait-ai.app">info@fait-ai.app</a> to exercise any of them. We'll respond within 30 days (45 days for California requests).</p>
+
+<h3>Everyone has these rights</h3>
+<ul>
+  <li><strong>Access:</strong> get a copy of the personal data we hold about you</li>
+  <li><strong>Correction:</strong> fix inaccurate or incomplete data</li>
+  <li><strong>Deletion:</strong> delete your account and all your data (see Section 10 for how)</li>
+  <li><strong>Portability:</strong> receive your data in a machine-readable format</li>
+  <li><strong>Withdraw consent:</strong> turn off any processing we do based on your consent</li>
+</ul>
+
+<h3>If you live in Canada (PIPEDA)</h3>
+<ul>
+  <li>Right to know what personal information we have and how it's being used</li>
+  <li>Right to challenge the accuracy of your information</li>
+  <li>Right to withdraw consent (subject to legal or contractual restrictions)</li>
+  <li>Right to file a complaint with the Office of the Privacy Commissioner of Canada: <a href="https://www.priv.gc.ca">priv.gc.ca</a></li>
+</ul>
+
+<h3>If you live in the European Economic Area, UK, or Switzerland (GDPR)</h3>
+<ul>
+  <li>All rights listed above</li>
+  <li>Right to restrict processing in certain circumstances</li>
+  <li>Right to object to processing based on legitimate interest</li>
+  <li>Right to not be subject to decisions based solely on automated processing with legal effects (we don't do this)</li>
+  <li>Right to lodge a complaint with your local supervisory authority</li>
+</ul>
+
+<h3>If you live in California (CCPA / CPRA)</h3>
+<ul>
+  <li>Right to know categories of personal information collected, sold, and shared (we don't sell or share for cross-context advertising)</li>
+  <li>Right to delete your personal information</li>
+  <li>Right to correct inaccurate personal information</li>
+  <li>Right to opt out of the sale or sharing of your personal information (we don't do either, but the right is available)</li>
+  <li>Right to limit the use of sensitive personal information (your health data is only used for providing the service, not for advertising)</li>
+  <li>Right to non-discrimination for exercising your rights</li>
+  <li>The categories of personal information we collect in the last 12 months are listed in Section 2</li>
+</ul>
+
+<p><strong>If you live elsewhere (Virginia, Colorado, Connecticut, Utah, Texas, Oregon, Montana, etc.):</strong> state privacy laws vary. The rights listed above cover most of what applies; email us if you have a specific state-law question.</p>
+
+<p><strong>For users under GDPR:</strong> you can also contact your national data protection authority if you believe we've mishandled your data. A list is at <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en">edpb.europa.eu</a>.</p>
+
+<h2>10. How to delete your account</h2>
+<p>You can delete your account at any time. We give you two ways:</p>
+<p><strong>In-app (fastest):</strong></p>
+<ol>
+  <li>Open the FAiT app</li>
+  <li>Go to Settings → Account → Delete My Account</li>
+  <li>Confirm the deletion</li>
+</ol>
+<p><strong>By email:</strong> send an email to <a href="mailto:info@fait-ai.app">info@fait-ai.app</a> from the address on your account, with the subject "Delete my account." We'll process the request within 7 days.</p>
+
+<h3>What happens when you delete your account</h3>
+<ul>
+  <li>Your account is immediately marked for deletion and you're signed out</li>
+  <li>All your personal data — workouts, meals, weight, photos, conversations, Twin profile, memory — is deleted from our production database within 30 days</li>
+  <li>Backups containing your data are purged within 90 days of deletion</li>
+  <li>Analytics data that was already anonymized or aggregated may be retained (we can't link it back to you)</li>
+  <li>Transactional email records may be retained for up to 90 days for operational purposes</li>
+  <li>Legal and tax records (invoices, subscription receipts) are retained as long as Canadian tax law requires — typically 6 years — but these contain only payment metadata, not your health data</li>
+</ul>
+
+<p><strong>Can I come back?</strong> Yes, but you'll be starting a new account. We don't restore deleted accounts because the data is actually gone.</p>
+
+<h2>11. Cookies, tracking, and ads</h2>
+<p><strong>In the mobile app:</strong> we don't use web cookies. We use secure local storage on your device to keep you signed in and remember your preferences.</p>
+<p><strong>On our website (fait-ai.app):</strong> the website is a simple marketing site. We don't use advertising cookies. If we add any analytics cookies in the future, we'll show a consent banner first.</p>
+<p><strong>Advertising identifiers (Apple IDFA, Google Advertising ID):</strong> we don't use these. We don't advertise to you based on your activity in the app, and we don't share your identifiers with ad networks.</p>
+<p><strong>App Tracking Transparency (iOS):</strong> FAiT does not track you across apps or websites owned by other companies. We don't show the ATT prompt because we don't do cross-app tracking.</p>
+<p><strong>Do Not Track:</strong> our website honors the Do Not Track browser signal where applicable. Since we don't track across sites anyway, this doesn't change what we collect.</p>
+<p><strong>No advertising:</strong> FAiT doesn't show ads today, and we don't currently plan to. If this ever changes, we'll update this policy, give you notice, and (where required) ask for your consent.</p>
+
+<h2>12. Children's privacy</h2>
+<p>FAiT is not intended for children under 16. We do not knowingly collect personal information from anyone under 16. If you are under 16, do not create an account or use FAiT.</p>
+<p>If we discover that we have collected personal information from a child under 16, we will delete that information promptly. If you are a parent or guardian and believe a child under 16 has given us personal information, email <a href="mailto:info@fait-ai.app">info@fait-ai.app</a> so we can delete it.</p>
+<p>For users aged 16 and older but under 18 in jurisdictions that treat them as minors: a parent or guardian should review this policy and the app's functionality with you before you sign up.</p>
+
+<h2>13. Changes to this policy</h2>
+<p>We may update this policy as the app evolves. When we make changes:</p>
+<ul>
+  <li><strong>Minor changes</strong> (clarifications, wording fixes, new processor added that doesn't change what data we share): we update the "Last Updated" date at the top of this page and post the new version.</li>
+  <li><strong>Material changes</strong> (new types of data collected, new purposes, changes to how we share data): we notify you in the app with an in-app notice and, where legally required, by email. For some changes (new sensitive data processing, for example), we'll ask for your consent before the change applies to you.</li>
+</ul>
+<p>If you keep using FAiT after a material change, that counts as acceptance of the new policy. If you don't want to accept it, you can delete your account per Section 10.</p>
+<p>Previous versions of this policy are available on request at <a href="mailto:info@fait-ai.app">info@fait-ai.app</a>.</p>
+
+<h2>14. Contact us</h2>
+<p><strong>Privacy questions, data requests, complaints, account deletion:</strong></p>
+<ul>
+  <li>Email: <a href="mailto:info@fait-ai.app">info@fait-ai.app</a></li>
+  <li>Response time: within 30 days (within 45 days for California CCPA requests)</li>
+</ul>
+<p><strong>Mail:</strong> if you need to reach us by mail, email us first and we'll provide a mailing address.</p>
+
+<h3>If you're not satisfied with our response</h3>
+<ul>
+  <li><strong>Canada:</strong> Office of the Privacy Commissioner of Canada — <a href="https://www.priv.gc.ca">priv.gc.ca</a></li>
+  <li><strong>EU/EEA:</strong> your national Data Protection Authority — <a href="https://www.edpb.europa.eu/about-edpb/about-edpb/members_en">edpb.europa.eu</a></li>
+  <li><strong>UK:</strong> Information Commissioner's Office — <a href="https://ico.org.uk">ico.org.uk</a></li>
+  <li><strong>California:</strong> California Privacy Protection Agency — <a href="https://cppa.ca.gov">cppa.ca.gov</a></li>
+</ul>
+
+<hr>
+
+<p class="disclaimer">This privacy policy is provided for informational purposes. It is not legal advice. Before relying on this policy in a regulatory filing or litigation, consult a qualified privacy lawyer licensed in your jurisdiction.</p>
+
+</main>
+
+<footer>
+  <div>
+    <a href="/">Home</a>
+    <a href="/privacy.html">Privacy</a>
+    <a href="mailto:info@fait-ai.app">Contact</a>
+  </div>
+  <div class="made">© 2026 FAiT · Made in Canada</div>
+</footer>
+
 </body>
 </html>
